@@ -34,18 +34,13 @@ dd01a35078 Update CHANGELOG.md
   Командой git log -L :providerSource:provider_source.go получил коммит в котором функция была создана. Он самый ранний по дате. (2 апреля 2020). 8c928e83589d90a031f811fae52a81be7153e82f 
 
   -Найдите все коммиты, в которых была изменена функция globalPluginDirs.
-  В этот раз команда git grep -n 'func globalPluginDirs' не показала файла, связанного с функцией, потому нашёл связанные с ней коммиты другой командой:
-  git log --all -G'globalPluginDirs' --oneline
+  Командой git log -L :globalPluginDirs:plugins.go получил все коммиты, в которых изменялась функция:
 
-7c4aeac5f3 stacks: load credentials from config file on startup (#35952)
-fcdb5d2e55 (origin/f-plugin-finder) WIP centralized plugin finder
-22a2580e93 main: Use the new cliconfig package credentials source
-7c4aeac5f3 stacks: load credentials from config file on startup (#35952)
-fcdb5d2e55 (origin/f-plugin-finder) WIP centralized plugin finder
-22a2580e93 main: Use the new cliconfig package credentials source
-35a058fb3d main: configure credentials from the CLI config file
-c0b1761096 prevent log output during init
-8364383c35 Push plugin discovery down into command package
+78b122055 Remove config.go and update things using its aliases
+52dbf9483 keep .terraform.d/plugins for discovery
+41ab0aef7 Add missing OS_ARCH dir to global plugin paths
+66ebff90c move some more plugin search path logic to command
+8364383c3 Push plugin discovery down into command package
 
 
   -Кто автор функции synchronizedWriters?
