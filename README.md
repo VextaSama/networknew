@@ -1,4 +1,5 @@
 Ответы по домашнему заданию "Инструменты Git".
+```
 1. Найдите полный хеш и комментарий коммита, хеш которого начинается на aefea.
 Командой git show aefea находим нужный коммит.
 
@@ -55,3 +56,4 @@ c0b1761096 prevent log output during init
   Командой git show 5ac311e2a9 выясняем кто автор.
   Martin Atkins <mart@degeneration.co.uk>
   
+```
